@@ -11,6 +11,7 @@ import (
 	"strconv"
 )
 
+// Version 1
 func CountBits(n uint) int {
 	binaryStr := strconv.FormatUint(uint64(n), 2)
 
@@ -23,6 +24,18 @@ func CountBits(n uint) int {
 
 	return count
 }
+
+// Version 2
+// func CountBits(num uint) int {
+//     count := 0
+//     for num > 0 {
+//         if num&1 == 1 {
+//             count++
+//         }
+//         num >>= 1
+//     }
+//     return count
+// }
 
 func main()  {
 	fmt.Println(CountBits(4))
